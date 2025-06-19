@@ -1,0 +1,22 @@
+[project]
+name = "src"
+version = "0.1.0"
+description = "A Simple To Do List Streamlit App"
+authors = [
+    {name = "kieran.pritchard@ons.gov.uk"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "streamlit (>=1.46.0,<2.0.0)"
+]
+
+[tool.poetry]
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.4.1"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
