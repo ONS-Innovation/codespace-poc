@@ -40,21 +40,29 @@ The repository contains the following features:
 #### Local Running
 
 1. Clone the repository:
+
     ```bash
     git clone https://github.com/ONSdigital/codespace-poc.git
     ```
+
 2. Navigate to the project directory:
+
     ```bash
     cd codespace-poc
     ```
+
 3. Install the required dependencies:
+
     ```bash
     poetry install
     ```
+
 4. Run the application:
+
     ```bash
     poetry run streamlit run src/app.py
     ```
+
 5. Open your web browser and navigate to `http://localhost:8501` to view the To Do List app.
 
 ### Codespace Running
@@ -63,7 +71,56 @@ The repository contains the following features:
 2. Wait for the Codespace to initialize and install the required dependencies.
 3. Once the Codespace is ready, open a terminal in the Codespace.
 4. Run the application:
+
     ```bash
     poetry run streamlit run src/app.py
     ```
+
 5. Go to the Local URL provided in the terminal to view the To Do List app (cmd + click or ctrl + click).
+
+### Linting, Formatting, and Testing
+
+#### Linting and Formatting (Python)
+
+To ensure code quality, this project uses Black, Flake8, Isort and Mypy for linting and formatting. You can run these tools using the following command:
+
+```bash
+make lint
+```
+
+#### Testing
+
+To run the unit tests, you can use the following command:
+
+```bash
+make test
+```
+
+#### Security Checks
+
+To run security checks, you can use the following command:
+
+```bash
+make security
+```
+
+#### Markdown Linting
+
+To ensure the Markdown files are well-formatted, you can use the following command:
+
+```bash
+make md_lint
+```
+
+### GitHub Actions
+
+This repository makes use of GitHub Actions for CI. Actions are available within `.github/workflows`.
+
+The following Actions are available:
+
+- `py_lint.yaml` | Python Linting
+- `md_lint.yaml` | Markdown Linting
+- `security.yaml` | Security Checks
+- `testing.yaml` | Unit Testing
+
+The above actions will run automatically on push and pull requests to the `main` branch, ensuring that code quality and security standards are maintained.

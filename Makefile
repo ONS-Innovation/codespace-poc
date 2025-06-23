@@ -35,6 +35,11 @@ security_check: ## Run security checks.
 test:  ## Run the tests and check coverage.
 	poetry run pytest -n auto --cov=src --cov-report term-missing --cov-fail-under=95
 
+.PHONY: md_lint
+md_lint: ## Lint markdown files.
+	@echo "Running markdownlint..."
+	sh ./shell_scripts/md_lint.sh
+
 .PHONY: run ## Run the application.
 run: ## Run the application.
 	poetry run streamlit run src/app.py
