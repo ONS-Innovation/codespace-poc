@@ -17,3 +17,8 @@ lint: ## Run linters.
 	poetry run isort .
 	@echo "Running mypy..."
 	poetry run mypy .
+
+.PHONY: security_check
+security_check: ## Run security checks.
+	@echo "Running bandit..."
+	bandit -r .
