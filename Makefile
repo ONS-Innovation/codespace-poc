@@ -29,7 +29,7 @@ lint: ## Run linters.
 .PHONY: security_check
 security_check: ## Run security checks.
 	@echo "Running bandit..."
-	poetry run bandit -r .
+	poetry run bandit -c bandit.yaml -r .
 
 .PHONY: test
 test:  ## Run the tests and check coverage.
