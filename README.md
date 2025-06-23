@@ -1,51 +1,55 @@
 # GitHub Codespaces PoC
 
-An example Python project to demonstrate the use of GitHub Codespaces.
-
-## Contents
-
-- [GitHub Codespaces PoC](#github-codespaces-poc)
-  - [Contents](#contents)
-  - [Overview](#overview)
-  - [Project Scope](#project-scope)
-  - [To Do List](#to-do-list)
-    - [Getting Started](#getting-started)
-      - [Codespace Running (Recommended)](#codespace-running-recommended)
-      - [Local Running](#local-running)
-        - [With Devcontainer](#with-devcontainer)
-        - [Without Devcontainer](#without-devcontainer)
-    - [Linting, Formatting, and Testing](#linting-formatting-and-testing)
-      - [Linting and Formatting (Python)](#linting-and-formatting-python)
-      - [Testing](#testing)
-      - [Security Checks](#security-checks)
-      - [Markdown Linting](#markdown-linting)
-    - [GitHub Actions](#github-actions)
-
 ## Overview
 
 This repository contains a To Do List app, based in Python. The purpose of this repository is to investigate the use of GitHub Codespaces and demonstrate best practices when working with Python in ONS.
 
-The repository contains the following features:
+## Contents
 
-- Example To Do List App
-- All required GitHub Housekeeping features, including the use of:
-  - A README and /docs.
-  - A Pull Request template, Issue template, CONTRIBUTING and CODE_OF_CONDUCT files.
-  - LICENSE and SECURITY files.
-  - A .gitignore and CODEOWNERS.
-- GitHub Action Workflows for automated CI processes.
-- A .devcontainer configuration for Codespace setup.
+- [GitHub Codespaces PoC](#github-codespaces-poc)
+  - [Overview](#overview)
+  - [Contents](#contents)
+  - [Tech Stack](#tech-stack)
+  - [Project Scope](#project-scope)
+  - [Output](#output)
+  - [Getting Started](#getting-started)
+    - [Codespace Running (Recommended)](#codespace-running-recommended)
+    - [Local Running](#local-running)
+      - [With Devcontainer](#with-devcontainer)
+      - [Without Devcontainer](#without-devcontainer)
+  - [Linting, Formatting, and Testing](#linting-formatting-and-testing)
+    - [Linting and Formatting (Python)](#linting-and-formatting-python)
+    - [Testing](#testing)
+    - [Security Checks](#security-checks)
+    - [Markdown Linting](#markdown-linting)
+  - [GitHub Actions](#github-actions)
+
+## Tech Stack
+
+The project uses Streamlit for the web application, Poetry for dependency management, and includes various tools for linting, formatting, and testing to ensure code quality. These include:
+
+- **Black** for code formatting
+- **Flake8** for linting
+- **Isort** for import sorting
+- **Mypy** for type checking
+- **Pytest** for unit testing
+- **Bandit** for security checks
+- **Markdownlint** for Markdown file linting
+
+The repository also contains a range of housekeeping documentation to fit ONS development best practices, including a `CONTRIBUTING.md` file, a `CODE_OF_CONDUCT.md` and various issue and pull request templates to guide contributions.
 
 ## Project Scope
 
 - To evaluate the feasibility and effectiveness of using GitHub Codespaces for Python projects.
 - To create a sample repository containing all best practices for Python development on GitHub.
 
-## To Do List
+## Output
 
-### Getting Started
+A write-up of the findings and recommendations are available within the [Output Report](./output_report.md). This report includes the general experience of using GitHub Codespaces, the benefits and drawbacks of using Codespaces, and recommendations for future use.
 
-#### Codespace Running (Recommended)
+## Getting Started
+
+### Codespace Running (Recommended)
 
 1. Open the repository in GitHub Codespaces.
 2. Wait for the Codespace to initialize and install the required dependencies.
@@ -58,9 +62,9 @@ The repository contains the following features:
 
 5. Go to the Local URL provided in the terminal to view the To Do List app (cmd + click or ctrl + click).
 
-#### Local Running
+### Local Running
 
-##### With Devcontainer
+#### With Devcontainer
 
 This method requires a Docker daemon running on your machine and a copy of VS Code with the Devcontainer extension installed.
 
@@ -86,7 +90,7 @@ This method requires a Docker daemon running on your machine and a copy of VS Co
     poetry run streamlit run src/app.py
     ```
 
-##### Without Devcontainer
+#### Without Devcontainer
 
 1. Clone the repository:
 
@@ -114,9 +118,9 @@ This method requires a Docker daemon running on your machine and a copy of VS Co
 
 5. Open your web browser and navigate to `http://localhost:8501` to view the To Do List app.
 
-### Linting, Formatting, and Testing
+## Linting, Formatting, and Testing
 
-#### Linting and Formatting (Python)
+### Linting and Formatting (Python)
 
 To ensure code quality, this project uses Black, Flake8, Isort and Mypy for linting and formatting. You can run these tools using the following command:
 
@@ -124,7 +128,7 @@ To ensure code quality, this project uses Black, Flake8, Isort and Mypy for lint
 make lint
 ```
 
-#### Testing
+### Testing
 
 To run the unit tests, you can use the following command:
 
@@ -132,7 +136,7 @@ To run the unit tests, you can use the following command:
 make test
 ```
 
-#### Security Checks
+### Security Checks
 
 To run security checks, you can use the following command:
 
@@ -140,7 +144,7 @@ To run security checks, you can use the following command:
 make security
 ```
 
-#### Markdown Linting
+### Markdown Linting
 
 To ensure the Markdown files are well-formatted, you can use the following command:
 
@@ -148,7 +152,7 @@ To ensure the Markdown files are well-formatted, you can use the following comma
 make md_lint
 ```
 
-### GitHub Actions
+## GitHub Actions
 
 This repository makes use of GitHub Actions for CI. Actions are available within `.github/workflows`.
 
