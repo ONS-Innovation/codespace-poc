@@ -2,11 +2,14 @@ from streamlit.testing.v1 import AppTest
 
 at = AppTest.from_file("../src/app.py").run()
 
+
 class TestApp:
 
     def test_session_state_initialization(self):
         assert "tasks" in at.session_state, "Session state 'tasks' was not initialized."
-        assert isinstance(at.session_state.tasks, list), "'tasks' should be a list in session state."
+        assert isinstance(
+            at.session_state.tasks, list
+        ), "'tasks' should be a list in session state."
         assert len(at.session_state.tasks) == 0, "'tasks' should be empty initially."
 
     def test_add_task(self):
