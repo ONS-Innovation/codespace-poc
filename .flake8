@@ -1,0 +1,5 @@
+[flake8]
+; Configuration for flake8, a tool for checking Python code style
+
+# Ignore line length errors
+extend-ignore = E501
