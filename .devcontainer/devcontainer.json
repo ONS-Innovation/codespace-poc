@@ -12,7 +12,7 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"DavidAnson.vscode-markdownlint",
+				"yzhang.markdown-all-in-one",
 				"ms-vscode.makefile-tools",
 				"GitHub.copilot",
 				"GitHub.vscode-github-actions"

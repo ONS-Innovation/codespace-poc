@@ -1,17 +1,25 @@
-# codespace-poc
+# GitHub Codespaces PoC
 
 An example Python project to demonstrate the use of GitHub Codespaces.
 
 ## Contents
 
-- [codespace-poc](#codespace-poc)
+- [GitHub Codespaces PoC](#github-codespaces-poc)
   - [Contents](#contents)
   - [Overview](#overview)
   - [Project Scope](#project-scope)
   - [To Do List](#to-do-list)
     - [Getting Started](#getting-started)
+      - [Codespace Running (Recommended)](#codespace-running-recommended)
       - [Local Running](#local-running)
-    - [Codespace Running](#codespace-running)
+        - [With Devcontainer](#with-devcontainer)
+        - [Without Devcontainer](#without-devcontainer)
+    - [Linting, Formatting, and Testing](#linting-formatting-and-testing)
+      - [Linting and Formatting (Python)](#linting-and-formatting-python)
+      - [Testing](#testing)
+      - [Security Checks](#security-checks)
+      - [Markdown Linting](#markdown-linting)
+    - [GitHub Actions](#github-actions)
 
 ## Overview
 
@@ -37,7 +45,48 @@ The repository contains the following features:
 
 ### Getting Started
 
+#### Codespace Running (Recommended)
+
+1. Open the repository in GitHub Codespaces.
+2. Wait for the Codespace to initialize and install the required dependencies.
+3. Once the Codespace is ready, open a terminal in the Codespace.
+4. Run the application:
+
+    ```bash
+    poetry run streamlit run src/app.py
+    ```
+
+5. Go to the Local URL provided in the terminal to view the To Do List app (cmd + click or ctrl + click).
+
 #### Local Running
+
+##### With Devcontainer
+
+This method requires a Docker daemon running on your machine and a copy of VS Code with the Devcontainer extension installed.
+
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/ONSdigital/codespace-poc.git
+    ```
+
+2. Open the repository in Visual Studio Code.
+
+3. When prompted, select "Reopen in Container" to open the project in a Devcontainer.
+
+    > If you do not see the prompt, you can manually reopen in a container by clicking on the green button in the bottom left corner of VS Code and selecting "Reopen in Container".
+
+4. Wait for the Devcontainer to build and install the required dependencies.
+
+5. Once the Devcontainer is ready, open a terminal in VS Code.
+
+6. Run the application:
+
+    ```bash
+    poetry run streamlit run src/app.py
+    ```
+
+##### Without Devcontainer
 
 1. Clone the repository:
 
@@ -64,19 +113,6 @@ The repository contains the following features:
     ```
 
 5. Open your web browser and navigate to `http://localhost:8501` to view the To Do List app.
-
-### Codespace Running
-
-1. Open the repository in GitHub Codespaces.
-2. Wait for the Codespace to initialize and install the required dependencies.
-3. Once the Codespace is ready, open a terminal in the Codespace.
-4. Run the application:
-
-    ```bash
-    poetry run streamlit run src/app.py
-    ```
-
-5. Go to the Local URL provided in the terminal to view the To Do List app (cmd + click or ctrl + click).
 
 ### Linting, Formatting, and Testing
 
