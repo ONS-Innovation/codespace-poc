@@ -49,7 +49,7 @@ def toggle_task(index: int):
 # Input form for adding a new task
 
 with st.form(key="task_form"):
-    task_input = st.text_input("Enter a new task:")
+    task_input = st.text_input("Enter a new task:", key="task_input")
     submit_button = st.form_submit_button(
         label="Add Task", on_click=add_task, args=(task_input,)
     )
