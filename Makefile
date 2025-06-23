@@ -18,9 +18,9 @@ clean:
 .PHONY: lint
 lint: ## Run linters.
 	@echo "Running black..."
-	black .
+	poetry run black .
 	@echo "Running flake8..."
-	flake8 .
+	poetry run flake8 .
 	@echo "Running isort..."
 	poetry run isort .
 	@echo "Running mypy..."
@@ -29,7 +29,7 @@ lint: ## Run linters.
 .PHONY: security_check
 security_check: ## Run security checks.
 	@echo "Running bandit..."
-	bandit -r .
+	poetry run bandit -r .
 
 .PHONY: test
 test:  ## Run the tests and check coverage.
