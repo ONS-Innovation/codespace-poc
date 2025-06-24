@@ -93,4 +93,21 @@ There is an initial effort to set this up, but once it is done, all commits made
 
 ### Setup Overhead
 
+To adopt GitHub Codespaces across ONSdigital, there is an initial setup overhead to consider. This includes:
+
+- Setting up the organisation's policies for codespaces, including ownership, usage limits, and hardware types.
+- Creating Dev Container templates for projects to adopt.
+- Updating existing projects to include a Dev Container configuration. This can be avoided by using GitHub's default Dev Container configuration, but this may not be suitable for all projects.
+- Training users on how to use codespaces effectively, including how to create and manage them, and how to use the Dev Container configuration.
+
 ## Recommendations / Next Steps
+
+Following the spike, I think that GitHub Codespaces are well suited to our use case, but the cost is a major drawback. If we were to adopt the "programming out of a container" approach, I would recommend using a Dev Container with Visual Studio Code instead of GitHub Codespaces, as this removes the cost of compute. This alternative would cause some initial setup overhead, such as installing a docker daemon and configuring Dev Containers for each project, but would be worth the reward in the long run. In terms of less technical users, I think that Codespaces would be a great way to allow them to contribute to projects without needing to understand the technology stack or setup a local development environment, but this could also be achieved with Dev Containers and Visual Studio Code (perhaps with an initial learning curve).
+
+In terms of next steps, I would recommend the following:
+
+- **Ownership Model**: Decide on the ownership model for codespaces within ONSdigital. This would include who can create codespaces, who owns them, and what policies should be applied to manage their usage.
+- **Costing Trial**: If we were to adopt GitHub Codespaces, I would recommend running a costing trial with a small group of developers to see how much it would cost in practice. This would help to understand the financial implications of using codespaces and whether they are feasible for the organisation.
+- **Dev Container Adoption**: Start adopting Dev Containers across projects. This would allow us to start using GitHub Codespaces, and, if too expensive, we can fall back to using Dev Containers with Visual Studio Code without losing the benefits of a consistent development environment. If templates are created for common container configurations, this would speed up the adoption process.
+- **Other Languages**: Investigate using Codespaces with other languages, such as JavaScript. This would help to understand how well Codespaces work with different technology stacks. If we were to investigate a web stack, for example, React with Node.js, this would allow us to see how Codespaces scales with project complexity.
+- **Lightning Talk/Demo**: Present the findings of this spike to potential users to understand their thoughts and concerns. This would help to gauge interest in using GitHub Codespaces and Dev Containers, whether users are willing to adopt them and if they actually solve the problems we are trying to address.
