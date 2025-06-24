@@ -47,6 +47,10 @@ The repository also contains a range of housekeeping documentation to fit ONS de
 
 A write-up of the findings and recommendations are available within the [Output Report](./output_report.md). This report includes the general experience of using GitHub Codespaces, the benefits and drawbacks of using Codespaces, and recommendations for future use.
 
+This report is also available in MS Word Format (`.docx`). This file is available within the repository's releases.
+
+*(See [`pandoc.yaml`](./.github/workflows/pandoc.yaml) for how this gets generated).*
+
 ## Getting Started
 
 ### Codespace Running (Recommended)
