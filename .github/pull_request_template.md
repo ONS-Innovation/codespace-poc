@@ -1,6 +1,6 @@
 # Overview
 
-A brief description of what the bug fix is.
+A brief description of what the PR is for.
 
 # Related Issue / Ticket
 
@@ -14,6 +14,10 @@ A description of the changes made to resolve the bug.
   - Description
 - Change B
   - Description
+
+# Why This Change is Necessary
+
+A description of why this change is necessary, including any relevant context or background information.
 
 # How to Test
 
