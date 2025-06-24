@@ -1,6 +1,6 @@
 # GitHub Codespaces Proof of Concept: Findings and Recommendations
 
-## TL;DR
+## Executive Summary
 
 This report summarizes the experience of using GitHub Codespaces for a proof of concept project. It includes the benefits and drawbacks of using Codespaces, as well as recommendations for future use.
 
@@ -13,7 +13,7 @@ To summarise, the main findings are:
 ## Contents
 
 - [GitHub Codespaces Proof of Concept: Findings and Recommendations](#github-codespaces-proof-of-concept-findings-and-recommendations)
-  - [TL;DR](#tldr)
+  - [Executive Summary](#executive-summary)
   - [Contents](#contents)
   - [General Experience](#general-experience)
   - [Key Findings](#key-findings)
